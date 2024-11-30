@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ForwardMover : MonoBehaviour
@@ -8,6 +6,6 @@ public class ForwardMover : MonoBehaviour
     
     private void Update()
     {
-        transform.Translate(Vector3.forward * _speed, Space.Self);
+        transform.Translate(Vector3.forward * _speed * Time.deltaTime, Space.Self);
     }
 }
